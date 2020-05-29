@@ -108,7 +108,10 @@ print("start of part 1") # set breakpoint here
 L = [0, [], [1,2,3,4], [[5],[6,7]], [8,9,10]]
 print(L)
 # your code
-
+print("start of part 1") # set breakpoint here
+L = [0, [], [1,2,3,4], [[5],[6,7]], [8,9,10]]
+X = [L[0], L[2][1], L[2][2], [L[3][0][0], L[3][1][0]], L[-1][0], L[-1][2]]
+print(X)
 
 print("end of 1") # set breakpoint here 
 '''
@@ -160,7 +163,10 @@ print(newL) # [0, 2, 3, [5, 6], 8, 10]
 print("start of part 2") # set breakpoint here
 s = "Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects."
 # your code here
-
+sentences = s.split(". ")
+print("There are ", len(sentences), "sentences:")
+for sentence in sentences:
+    print(sentence)    
 print("end of 2") # set breakpoint here 
 '''
 
@@ -214,6 +220,19 @@ for e in sentence_list:
 print("start of part 3") # set breakpoint here
 # your code here
 
+s = "Python is an interpreted, high-level, general-purpose programming language."
+word_list = s.split() # split the string in an list of word elements
+upper_case = False  
+for word in word_list:
+    # replace characters with empty element
+    word = word.replace('.', '')
+    word = word.replace(',', '')
+    if upper_case == True:
+        print(word.upper())
+        upper_case = False
+    else:
+        print(word)
+        upper_case = True
 
 print("end of 3") # set breakpoint here 
 '''
@@ -290,7 +309,14 @@ print("start of part 4") # set breakpoint here
 s = "A very long description" # a long string
 filler = "..."
 # your code here
-
+for num in range(5, 15):
+    # validate that abbreviated isn't too long
+    if num * 2 + len(filler) > len(s):
+        print(num, s)
+    else:
+        abbreviated = s[0:num] + filler + s[-num:]
+        print(num, abbreviated)
+   
 
 print("end of 4") # set breakpoint here 
 '''

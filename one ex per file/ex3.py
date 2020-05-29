@@ -14,7 +14,19 @@
 # LANGUAGE
 print("start of part 3") # set breakpoint here
 # your code here
-
+s = "Python is an interpreted, high-level, general-purpose programming language."
+word_list = s.split() # split the string in an list of word elements
+upper_case = False  
+for word in word_list:
+    # replace characters with empty element
+    word = word.replace('.', '')
+    word = word.replace(',', '')
+    if upper_case == True:
+        print(word.upper())
+        upper_case = False
+    else:
+        print(word)
+        upper_case = True
 
 print("end of 3") # set breakpoint here 
 '''

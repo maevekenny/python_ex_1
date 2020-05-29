@@ -6,16 +6,15 @@
 #
 # L = [0, [], [1,2,3,4], [[5],[6,7]], [8,9,10]]
 # X = [ L[2][1:-1], L[-1][2] ] 
+# print(X)
 # print(x)  => [[2, 3], [10]]
 # You need to do something similar but end up with [0,2,3,[5,6],8,10] instead. One way to work 
 # through this is to break the process down in small steps, store result of each step in a new variable
 # and use those variables in the next step
 print("start of part 1") # set breakpoint here
 L = [0, [], [1,2,3,4], [[5],[6,7]], [8,9,10]]
-print(L)
-# your code
-
-
+X = [L[0], L[2][1], L[2][2], [L[3][0][0], L[3][1][0]], L[-1][0], L[-1][2]]
+print(X)
 print("end of 1") # set breakpoint here 
 '''
 

@@ -25,7 +25,8 @@
 # Task: create a variable with your name and print out Hello <name>
 print("start of part 0") # set breakpoint here
 # your code here
-
+name = 'Maeve'
+print('Hello ', name)
 
 print("end of 0") # set breakpoint here 
 '''
